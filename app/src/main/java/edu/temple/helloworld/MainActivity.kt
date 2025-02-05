@@ -26,8 +26,9 @@ class MainActivity : AppCompatActivity() {
         clickMeButton.setOnClickListener {
             val name = nameEditText.text.toString().trim()
 
+            // Check if name is empty and show appropriate message
             if (name.isEmpty()) {
-                displayTextView.text = "Please enter your name."
+                displayTextView.text = "Error: Please enter your name!"
             } else {
                 displayTextView.text = "Hello, $name"
             }
